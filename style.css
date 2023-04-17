@@ -1,0 +1,40 @@
+:root {
+  --main-bg-color: brown;
+  --odd-bg-color: orange;
+  --even-bg-color: red;
+}
+
+body {
+  font-size: 62.5%;
+  background-color: var(--main-bg-color);
+}
+
+/* #title-headline{
+    padding-left: 2rem;
+} */
+
+#row {
+  border-style: solid;
+  border-color: black;
+  /* display:block; */
+}
+#image {
+  height: 2rem;
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+#title-text {
+  padding-left: 2rem;
+  text-align: center;
+  /* padding-left: 10rem; */
+}
+
+.odd {
+  background-color: var(--odd-bg-color);
+}
+
+.even {
+  background-color: var(--even-bg-color);
+}

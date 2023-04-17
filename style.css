@@ -1,7 +1,8 @@
 :root {
   --main-bg-color: brown;
+  
   --odd-bg-color: orange;
-  --even-bg-color: red;
+  --even-bg-color: rgb(32, 216, 32);
 }
 
 body {

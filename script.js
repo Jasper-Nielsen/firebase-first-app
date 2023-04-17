@@ -7,7 +7,8 @@ const endpoint =
 
 async function initApp() {
   const postList = await getPosts();
-  showPosts(postList);
+  const posts = showPosts(postList);
+  //   giveDifferentBackgroundColorDependingOnId(posts)
 }
 
 async function getPosts() {
@@ -32,18 +33,30 @@ function preparePostData(dataObject) {
   return postArray;
 }
 
-function showPosts(list) {
-  for (const post of list) {
+function showPosts(posts) {
+  for (const post of posts) {
     addPostToDom(post);
+    giveDifferentBackgroundColorDependingOnId(post);
   }
 }
-
+//class="grid-item ${pokemon.type.toLowerCase()}"
 function addPostToDom(post) {
   const html =
     /*html */
-    `<tr id="row">
+    `<tr id="row" >
+        <td> ${post.id} </td>
         <td  > <img id="image" src="${post.image}"></td>
         <td id="title-text">${post.title}</td>
     </tr>`;
   document.querySelector("#table").insertAdjacentHTML("beforeend", html);
+}
+
+function giveDifferentBackgroundColorDependingOnId(post) {
+  const idNumber = `${post.id}`;
+  if (idNumber % 2 === 0) {
+    document.querySelector("#row").classList.add("even");
+  } else {
+    document.querySelector("#row").classList.add("odd");
+  }
+  console.log(`idNumber: ${post.id} remainder: ${post.id % 2}`);
 }

@@ -115,7 +115,7 @@ function addPostToDom(post) {
         <td> <img id="image" src="${post.image}"></td>
         <td id="title-text">${post.title}</td>
         <td> ${post.body}</td>
-        <td>
+        <td id="btns">
             <button class="btn-delete">Delete</button>
             <button class="btn-update">Update</button>
         </td>

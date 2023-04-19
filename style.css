@@ -13,17 +13,13 @@ body {
 
 #table-headlines {
   background-color: antiquewhite;
-  width: 100%;
 }
 
 #table-posts {
   border-collapse: collapse;
+  width: 100%;
 }
-#row {
-  border-style: solid;
-  border-color: black;
-  /* display:block; */
-}
+
 #image {
   height: 2rem;
   margin-left: 0.7rem;
@@ -36,8 +32,20 @@ body {
 
 #title-text {
   padding-left: 2rem;
-  text-align: center;
+
   /* padding-left: 10rem; */
+}
+
+#btns {
+  width: 10rem;
+}
+
+.btn-delete {
+  background-color: rgb(178, 28, 28);
+}
+
+.btn-update {
+  background-color: greenyellow;
 }
 
 tbody tr:nth-child(odd) td {

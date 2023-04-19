@@ -8,15 +8,15 @@
 body {
   font-size: 62.5%;
   background-color: var(--main-bg-color);
-  width: 100%;
-  margin-left: 0;
+  margin: 0;
 }
 
 #table-headlines {
   background-color: antiquewhite;
+  width: 100%;
 }
 
-#table {
+#table-posts {
   border-collapse: collapse;
 }
 #row {
@@ -28,15 +28,12 @@ body {
   height: 2rem;
   margin-left: 0.7rem;
   padding-top: 0.2rem;
+  width: 2rem;
   /* display: block;
   margin-left: auto;
   margin-right: auto; */
 }
 
-#table {
-  margin-left: 0;
-  width: 100%;
-}
 #title-text {
   padding-left: 2rem;
   text-align: center;

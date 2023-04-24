@@ -134,33 +134,12 @@ function addPostToDom(post) {
     .querySelector("#posts tr:last-child .btn-update")
     .addEventListener("click", updateClicked);
 
-    document.querySelector("#btn-create").addEventListener("click",createPostClicked);
-
-function createPostClicked(event){
-event.preventDefault();
-
-  document.querySelector("#form-create").reset();
-
-document.querySelector("#create-dialog").showModal();
-
-document.querySelector("#form-create").addEventListener("submit",createPost);
-document.querySelector("#close-create-buttton").addEventListener("click",closeCreateDialog);
-}
-
-function closeCreateDialog(){
-
-  document.querySelector("#create-dialog").close();
-}
-
-
-
-
   function deleteClicked() {
     deletePost(post.id);
   }
 
   function updateClicked(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     //resets content of form so input fields are blank
     document.querySelector("#form-update").reset();

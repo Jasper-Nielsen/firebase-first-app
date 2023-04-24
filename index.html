@@ -21,7 +21,28 @@
       <tbody id="posts"></tbody>
     </table>
 
-    <table>
+<button type="submit" id="btn-create">Create</button>
+
+
+    <dialog id="create-dialog">
+      <form method="dialog" id="form-create">
+        <fieldset>
+          <legend>Create Post</legend>
+          <label for="image">Image</label>
+          <input type="text" name="image" /> <br />
+          <label for="title">Update Title</label>
+          <input type="text" name="title" /> <br />
+          <label for="body">Update Body</label>
+          <input type="text" name="body" /> <br />
+          <label for="uid">Id</label>
+          <input type="number" name="uid" /> <br />
+          <button id="close-create-buttton">Close</button>
+        <button type="submit" id="btn-submit-create">Submit</button>
+        </fieldset>
+      </form>
+    </dialog>
+
+    <!-- <table>
       <thead id="user-headline">
         <tr>
           <th id="user-image-headline">image</th>
@@ -32,7 +53,24 @@
         </tr>
       </thead>
       <tbody id="users"></tbody>
-    </table>
+    </table> -->
+
+    <dialog id="update">
+      <form method="dialog" id="form-update">
+        <fieldset>
+          <legend>Update post</legend>
+          <label for="image">Update Image</label>
+          <input type="url" name="image" id="input-img" /> <br />
+          <label for="title">Update Title</label>
+          <input type="text" name="title" id="input-title" /> <br />
+          <label for="body">Update Body</label>
+          <input type="text" name="body" id="input-body" />
+        </fieldset>
+
+        <button id="close-buttton">Close</button>
+        <button type="submit" id="btn-submit">Submit</button>
+      </form>
+    </dialog>
 
     <script src="script.js"></script>
   </body>

@@ -56,7 +56,7 @@ async function createPost() {
   });
 
   const data = await response.json();
-  // updatePostsGrid(); ????
+  updatePostsGrid();
   console.log(data);
 }
 
@@ -103,7 +103,24 @@ function addPostToDom(post) {
             <button class="btn-delete">Delete</button>
             <button class="btn-update">Update</button>
         </td>
-           
+           <td>
+    <dialog id="update">
+      <form method="dialog" id="form-update">
+        <fieldset>
+          <legend>Update post</legend>
+          <label for="image">Update Image</label>
+          <input type="url" name="image" id="input-img" /> <br />
+          <label for="title">Update Title</label>
+          <input type="text" name="title" id="input-title" /> <br />
+          <label for="body">Update Body</label>
+          <input type="text" name="body" id="input-body" />
+        </fieldset>
+
+        <button id="close-buttton">Close</button>
+        <button type="submit" id="btn-submit">Submit</button>
+      </form>
+    </dialog>
+           </td>
     </tr>`;
   document.querySelector("#posts").insertAdjacentHTML("beforeend", html);
 
@@ -122,10 +139,7 @@ function addPostToDom(post) {
   }
 
   function updateClicked(event) {
-    //removes eventlistener so when clicking update it only updates the one selected
-    document
-      .querySelector("#form-update")
-      .removeEventListener("submit", submitClicked);
+    event.preventDefault();
 
     //resets content of form so input fields are blank
     document.querySelector("#form-update").reset();
